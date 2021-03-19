@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Desafio include sobre mim</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        #btnTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            height: 50px;
+            width: 50px;
+            color: #fff;
+            background: #333333;
+            border: none;
+            border-radius: 50vh;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+
+        <h1>Quem sou eu? </h1>
+        <div class="imagem-perfil">
+            <img src="mini.jpeg" alt="some text">
+        </div>
+        <br><br>
+        <object width="480" height="344" data="https://www.youtube.com/embed/F9Bo89m2f6g"></object>
+
+
+
+
+        <br><br>
+        <h1> Por que eu quero entrada na include? </h1>
+        <embed src="https://www.youtube.com/embed/F9Bo89m2f6g" allowfullscreen="true" width="425" height="344">
+        <br><br>
+
+        <br><br>
+        <h1>Como eu me vejo daqui 5 anos? </h1>
+        <embed src="https://www.youtube.com/embed/F9Bo89m2f6g" allowfullscreen="true" width="425" height="344">
+        <br><br>
+
+    </center>
+
+    <button onClick="backToTop()" id="btnTop">Inicio</button>
+    <script>
+        window.onscroll = function() {
+            scroll();
+        }
+
+        function scroll() {
+            let btn = document.getElementById("btnTop");
+            if (document.documentElement.scrollTop > 50) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        }
+
+        function backToTop() {
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+    <script>
+        function typeWriter(elemento) {
+            const textoArray = elemento.innerHTML.split('');
+            elemento.innerHTML = '';
+            textoArray.forEach((letra, i) => {
+                setTimeout(() => elemento.innerHTML += letra, 75 * i);
+            });
+        }
+
+
+
+        const titulo = document.querySelector('h1');
+
+        typeWriter(titulo);
+    </script>
+
+
+
+
+</body>
+
+</html>
