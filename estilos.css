@@ -85,7 +85,7 @@ h1::after {
 }
 
 #myFooter .social-icons {
-    float: right;
+    float: left;
 }
 
 #myFooter .github:hover {
